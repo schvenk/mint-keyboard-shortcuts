@@ -1,12 +1,3 @@
-// ==UserScript==
-// @name Mint.com Keyboard Shortcuts
-// @description Adds a few simple keyboard shortcuts to Mint.com.
-// @downloadURL http://github.com/schvenk/mint-keyboard-shortcuts
-// @version 1.0
-// @author Dave Feldman (http://operationproject.com)
-// @match https://wwws.mint.com/transaction.event*
-// ==/UserScript==
-
 /* Licensed under the MIT License (http://opensource.org/licenses/MIT), though I'm not gonna
  * complain if you want to buy me a beer.
  */
@@ -48,30 +39,37 @@ var mintKeyboardShortcutsMain = function() {
 	key('ctrl+e, e', function() {
 		if (!clickOn('txnEdit-toggle')) {
 			clickOn('txnEdit-cancel');
+			console.log("Cancelled editing.");
 		}
+		console.log("???");
 	});
 
 	// Close and save the selected transaction.
 	key('ctrl+s, s', function() {
 		clickOn('txnEdit-submit');
+		console.log("Transaction saved.");
 	});
 
 	// Focus and select the category field.
 	key('ctrl+c, c', function(e) {
 		var el = document.getElementById('txnEdit-category_input');
-		console.log(el);
 		if (el) {
 			el.focus();
 			el.select();
+			console.log("Selected category.");
 		}
 		e.preventDefault();
 		return false;
 	});
 
 	// Toggle various transaction tags once the editor is open.
+	// todo move to user prefs
 	setTagKey('t', 'Tax Related');
 	setTagKey('b', 'Business');
 	setTagKey('r', 'Reimbursable');
+
+	// To debug loading:
+	// console.log("Loaded Mint.com shortcuts.");
 };
 
 
