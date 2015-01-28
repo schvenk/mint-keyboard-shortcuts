@@ -41,7 +41,7 @@ var mintKeyboardShortcutsMain = function() {
 			clickOn('txnEdit-cancel');
 			console.log("Cancelled editing.");
 		}
-		console.log("???");
+		console.log("Toggled Editing view.");
 	});
 
 	// Close and save the selected transaction.
@@ -69,7 +69,7 @@ var mintKeyboardShortcutsMain = function() {
 	setTagKey('r', 'Reimbursable');
 
 	// To debug loading:
-	// console.log("Loaded Mint.com shortcuts.");
+	console.log("Loaded Mint.com shortcuts.");
 };
 
 
