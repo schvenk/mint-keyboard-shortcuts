@@ -64,9 +64,9 @@ var mintKeyboardShortcutsMain = function() {
 
 	// Toggle various transaction tags once the editor is open.
 	// todo move to user prefs
-	setTagKey('t', 'Tax Related');
-	setTagKey('b', 'Business');
-	setTagKey('r', 'Reimbursable');
+	// setTagKey('t', 'Tax Related');
+	// setTagKey('b', 'Business');
+	// setTagKey('r', 'Reimbursable');
 
 	// To debug loading:
 	console.log("Loaded Mint.com shortcuts.");
