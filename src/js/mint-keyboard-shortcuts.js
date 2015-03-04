@@ -35,6 +35,22 @@ var mintKeyboardShortcutsMain = function() {
 		});
 	}
 
+
+	/*
+	 * Sets up a shortcut to toggle the selection for a row on/off.
+	 * @param trigger - The key to bind. Standard keymaster formatting.
+	 */
+	var setSelectKey = function(trigger) {
+		key(trigger, function() {
+			clickOn('txnEdit-checkbox');
+			console.log("Toggling the current transaction's checkbox.");
+		});
+	}
+
+	// Bind the x key to checkbox off/on toggling.
+	setSelectKey('x');
+
+
 	// Open/close the transaction editor for the selected transaction.
 	key('ctrl+e, e', function() {
 		if (!clickOn('txnEdit-toggle')) {
