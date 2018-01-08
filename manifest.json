@@ -1,0 +1,20 @@
+{
+  "name": "Mint Keyboard Shortcuts",
+  "version": "1.1",
+  "manifest_version": 2,
+  "description": "Adds a few keyboard shortcuts to Mint.com.",
+  "homepage_url": "https://github.com/schvenk/mint-keyboard-shortcuts",
+  "permissions": [
+    "https://www.mint.com/"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "https://wwws.mint.com/transaction.event*"
+      ],
+      "js": [
+        "src/js/mint-keyboard-shortcuts.js"
+      ]
+    }
+  ]
+}
